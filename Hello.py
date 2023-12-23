@@ -6,7 +6,7 @@ import pandas as pd
 @st.cache_data
 def fetch_games(genre):
     api_key = st.secrets['api_key']
-    url = f"https://api.rawg.io/api/games?key=api_key&genres={genre}"
+    url = f"https://api.rawg.io/api/games?key={api_key}&genres={genre}"
     response = requests.get(url)
     return response.json()
 
